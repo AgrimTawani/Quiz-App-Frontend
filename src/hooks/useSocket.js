@@ -6,7 +6,7 @@ const useSocket = (subjectId) => {
 
   useEffect(() => {
     if (!subjectId) return;
-    const socket = io(`http://51.20.10.127:3000`); // Replace with your server URL
+    const socket = io(`https://51.20.10.127:3000`); // Replace with your server URL
     setSocket(socket);
 
     socket.on('connect', () => {
