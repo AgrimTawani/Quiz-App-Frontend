@@ -6,8 +6,8 @@ const useSocket = (subjectId) => {
 
   useEffect(() => {
     if (!subjectId) return;
-
-    const socket = io('http://localhost:3000'); // Replace with your server URL
+    const localhost = "https://99a0-110-226-181-47.ngrok-free.app/";
+    const socket = io(`http://${localhost}:3000`); // Replace with your server URL
     setSocket(socket);
 
     socket.on('connect', () => {
